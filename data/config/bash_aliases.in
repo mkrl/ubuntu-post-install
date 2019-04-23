@@ -11,11 +11,14 @@ alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# ensure remove confirmations
-alias rm='rm -i'
-
 # human readable df
 alias df='df -h'
 
 # ignore common typos
 alias naon='nano'
+
+# pls
+alias pls='sudo'
+
+# nice grep
+alias grp='grep -Hrn'
