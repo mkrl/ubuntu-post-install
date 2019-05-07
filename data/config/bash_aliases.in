@@ -22,3 +22,11 @@ alias pls='sudo'
 
 # nice grep
 alias grp='grep -Hrn'
+
+# kill process occupying the port
+shut() {
+    PID=$(lsof -i:$1 | grep 'username' | awk '{print $2}')
+    if [ $PID ]; then
+        kill $PID;
+    fi
+}
