@@ -30,3 +30,14 @@ shut() {
         kill $PID;
     fi
 }
+
+# an important thing to mash every minute, better make it shorter
+alias gs='git status'
+
+# increase the amount of user file watchers when needed
+alias watchersup='echo 16384 | sudo tee /proc/sys/fs/inotify/max_user_watches'
+
+# interactive rebase (squash/something else last X commits)
+greb() { git rebase -i HEAD~"$1"; }
+
+
